@@ -1,0 +1,94 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+@theme {
+  --font-sans: 'MiSans VF', MiSans, system-ui, -apple-system, sans-serif;
+  --font-serif: 'MiSans VF', MiSans, Georgia, Cambria, 'Times New Roman', Times, serif;
+
+  /* 定义品牌颜色变量 */
+  --color-brand-light-black: #333333;
+  --color-brand-neutrals-600: #666666;
+  --color-brand-light-grey-wash: #f3f4f6;
+  --color-brand-neutrals-400: #9ca3af;
+}
+
+:root {
+  --ui-primary: var(--ui-color-primary-700);
+  font-family: var(--font-sans);
+  /* font-size: 16px; 默认基准字号 */
+
+  /* 主内容区域间距 */
+  --main-padding-x: 1rem; /* 16px */
+  --main-padding-y: 1rem; /* 32px */
+  --main-padding: var(--main-padding-y) var(--main-padding-x);
+}
+
+/* 小语种语言字体大小缩放 - 使用属性选择器 */
+:root[lang='ru'],
+:root[lang='vi'],
+:root[lang='ar'] {
+  font-size: 14px;
+}
+
+/* 响应式字体缩放 */
+@media (max-width: 640px) {
+  :root {
+    font-size: 14px;
+  }
+
+  :root[lang='ru'],
+  :root[lang='vi'],
+  :root[lang='ar'] {
+    font-size: 12px;
+  }
+}
+
+.dark {
+  --ui-primary: var(--ui-color-primary-200);
+}
+
+body {
+  @apply bg-gray-100 dark:bg-gray-900;
+  /* 使用 rem 单位以响应根元素字号变化 */
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* 为特定元素设置字号 */
+.text-small {
+  font-size: 0.875rem; /* 14px when root is 16px */
+}
+
+.text-large {
+  font-size: 1.125rem; /* 18px when root is 16px */
+}
+
+/* 轮播图箭头图标样式 */
+button[aria-label='Prev'] .iconify.i-custom\:arrow-left,
+button[aria-label='Next'] .iconify.i-custom\:arrow-right {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  button[aria-label='Prev'] .iconify.i-custom\:arrow-left,
+  button[aria-label='Next'] .iconify.i-custom\:arrow-right {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  button[aria-label='Prev'] .iconify.i-custom\:arrow-left,
+  button[aria-label='Next'] .iconify.i-custom\:arrow-right {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --main-padding-x: 10rem; /* 48px */
+    --main-padding-y: 2rem; /* 64px */
+  }
+}
