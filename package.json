@@ -2,6 +2,9 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -39,7 +42,6 @@
     "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3"
   },
-  "packageManager": "pnpm@10.18.1",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
