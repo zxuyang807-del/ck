@@ -383,6 +383,14 @@
         '/images/thumbnail/Goodwind-Power-Generator-1375kva-Yuchai-high-voltage-diesel-genset-series.webp',
       url: 'https://www.youtube.com/embed/tHRneDYSGow?autoplay=1&mute=1&loop=1&playlist=tHRneDYSGow',
     },
+    {
+      id: 46,
+      title: 'Goodwind Power Generator - 62.5kva Yuchai silent diesel genset series',
+      category: 'diesel',
+      thumbnail:
+        '/images/thumbnail/Goodwind-Power-Generator-62.5kva-Yuchai-silent-diesel-genset-series.webp',
+      url: 'https://www.youtube.com/embed/HrQ3MlwbMX8?autoplay=1&mute=1&loop=1&playlist=HrQ3MlwbMX8',
+    },
   ]
 
   // 当前选中的分类
@@ -438,10 +446,11 @@
           class="relative aspect-video cursor-pointer"
           @click="openVideoModal(video)"
         >
-          <NuxtImg
+          <img
             :src="video.thumbnail"
             :alt="video.title"
             class="w-full h-full object-cover"
+            loading="eager"
           />
           <div class="absolute inset-0 flex items-center justify-center">
             <UIcon
