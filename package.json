@@ -3,8 +3,10 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": "20.x"
+    "node": "20.x",
+    "pnpm": "9.4.1"
   },
+  "packageManager": "pnpm@9.4.1",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -41,16 +43,5 @@
     "prettier": "^3.6.2",
     "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "@tailwindcss/oxide",
-      "@vercel/speed-insights",
-      "esbuild",
-      "sharp",
-      "unrs-resolver",
-      "vue-demi"
-    ]
   }
 }
