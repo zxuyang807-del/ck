@@ -391,6 +391,14 @@
         '/images/thumbnail/Goodwind-Power-Generator-62.5kva-Yuchai-silent-diesel-genset-series.webp',
       url: 'https://www.youtube.com/embed/HrQ3MlwbMX8?autoplay=1&mute=1&loop=1&playlist=HrQ3MlwbMX8',
     },
+    {
+      id: 47,
+      title: 'Goodwind Power Generator - 30kva Shangchai (SDEC) silent series',
+      category: 'diesel',
+      thumbnail:
+        '/images/thumbnail/Goodwind-Power-Generator-30kva-Shangchai-(SDEC)-silent-series.webp',
+      url: 'https://www.youtube.com/embed/tqqUQsQE_Iw?autoplay=1&mute=1&loop=1&playlist=tqqUQsQE_Iw',
+    },
   ]
 
   // 当前选中的分类
