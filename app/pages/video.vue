@@ -407,6 +407,14 @@
         '/images/thumbnail/Goodwind-Power-Generator-200kva-Shangchai-(SDEC)-silent-series.webp',
       url: 'https://www.youtube.com/embed/1Qo0mpm9bTI?autoplay=1&mute=1&loop=1&playlist=1Qo0mpm9bTI',
     },
+    {
+      id: 49,
+      title: 'Goodwind Power Generator - 225kva Weichai silent series',
+      category: 'diesel',
+      thumbnail:
+        '/images/thumbnail/Goodwind-Power-Generator-225kva-Weichai-silent-series.webp',
+      url: 'https://www.youtube.com/embed/kme_JcLDSys?autoplay=1&mute=1&loop=1&playlist=kme_JcLDSys',
+    },
   ]
 
   // 当前选中的分类
@@ -535,7 +543,19 @@
 
                   <!-- 中央大播放按钮 -->
                   <div class="absolute inset-0 flex items-center justify-center">
-                    <USkeleton class="h-20 w-20 rounded-full" />
+                    <div
+                      class="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center"
+                    >
+                      <UIcon
+                        name="i-heroicons-play-solid"
+                        class="w-10 h-10 text-white ml-1"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 加载提示 -->
+                  <div class="absolute bottom-20 left-0 right-0 text-center">
+                    <p class="text-white/80 text-sm">{{ t('video.loading') }}</p>
                   </div>
                 </div>
               </div>
