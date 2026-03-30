@@ -415,6 +415,14 @@
         '/images/thumbnail/Goodwind-Power-Generator-225kva-Weichai-silent-series.webp',
       url: 'https://www.youtube.com/embed/kme_JcLDSys?autoplay=1&mute=1&loop=1&playlist=kme_JcLDSys',
     },
+    {
+      id: 50,
+      title: 'Goodwind Power Generator - 500kva Cummins Open type series',
+      category: 'diesel',
+      thumbnail:
+        '/images/thumbnail/Goodwind-Power-Generator-500kva-Cummins-Open-type-series.webp',
+      url: 'https://www.youtube.com/embed/t4WVYdVhbCI?autoplay=1&mute=1&loop=1&playlist=t4WVYdVhbCI',
+    },
   ]
 
   // 当前选中的分类
