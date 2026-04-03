@@ -431,6 +431,14 @@
         '/images/thumbnail/Goodwind-Power-Generator-62.5kva-Cummins-silent-diesel-genset-premium-series.webp',
       url: 'https://www.youtube.com/embed/tp8yb4GIIbE?autoplay=1&mute=1&loop=1&playlist=tp8yb4GIIbE',
     },
+    {
+      id: 52,
+      title: 'Goodwind Power Generator - 125kva Cummins silent diesel genset premium series',
+      category: 'diesel',
+      thumbnail:
+        '/images/thumbnail/Goodwind-Power-Generator-125kva-Cummins-silent-diesel-genset-premium-series.webp',
+      url: 'https://www.youtube.com/embed/YD-VNLbpTHE?autoplay=1&mute=1&loop=1&playlist=YD-VNLbpTHE',
+    },
   ]
 
   // 当前选中的分类
