@@ -1,93 +1,146 @@
 <template>
   <div :class="['w-full mx-auto bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md']">
-    <UForm
-      ref="form"
-      :schema="schema"
-      :state="formState"
-      :class="['w-full', layout === 'horizontal' ? 'space-y-6' : 'space-y-6']"
-      @submit="onSubmit"
-    >
-      <div
-        :class="['w-full', layout === 'horizontal' ? 'grid grid-cols-1 md:grid-cols-3 gap-4' : '']"
-      >
-        <UFormField
-          :label="t('contact.form.name')"
-          name="name"
-          class="flex flex-col w-full"
-        >
-          <template #label>
-            <span class="mb-2 font-medium">{{ t('contact.form.name') }}</span>
-          </template>
-          <UInput
-            v-model="formState.name"
-            class="w-full"
-          />
-        </UFormField>
-
-        <UFormField
-          :label="t('contact.form.email')"
-          name="email"
-          class="flex flex-col w-full"
-        >
-          <template #label>
-            <span class="mb-2 font-medium">{{ t('contact.form.email') }}</span>
-          </template>
-          <UInput
-            v-model="formState.email"
-            type="email"
-            class="w-full"
-          />
-        </UFormField>
-
-        <UFormField
-          :label="t('contact.form.region')"
-          name="region"
-          class="flex flex-col w-full"
-        >
-          <template #label>
-            <span class="mb-2 font-medium">{{ t('contact.form.region') }}</span>
-          </template>
-          <UInput
-            v-model="formState.region"
-            :placeholder="t('contact.form.regionPlaceholder')"
-            class="w-full"
-          />
-        </UFormField>
-      </div>
-
-      <UFormField
-        :label="t('contact.form.message')"
-        name="message"
-        class="flex flex-col w-full"
-      >
-        <template #label>
-          <span class="mb-2 font-medium">{{ t('contact.form.message') }}</span>
-        </template>
-        <UTextarea
-          v-model="formState.message"
-          :rows="5"
-          class="w-full"
-        />
-      </UFormField>
-
-      <div class="flex justify-center pt-6">
-        <UButton
-          type="submit"
-          class="w-full md:w-auto px-8 py-3 text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer flex items-center justify-center"
-          :loading="formStatus === 'loading'"
-          color="primary"
-          size="lg"
-        >
-          <span class="flex items-center justify-center gap-2">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div class="flex flex-col justify-center">
+        <div class="space-y-8">
+          <div class="flex items-start gap-4">
             <UIcon
-              name="i-custom-send"
-              class="w-5 h-5"
+              name="i-custom-tel"
+              class="w-8 h-8 text-primary shrink-0 mt-1"
             />
-            {{ t('contact.form.submit') }}
-          </span>
-        </UButton>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Tel</h3>
+              <p class="text-gray-600 dark:text-gray-400">+8619708412781</p>
+              <p class="text-gray-600 dark:text-gray-400">+8615895715480</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <UIcon
+              name="i-custom-whatsapp"
+              class="w-8 h-8 text-primary shrink-0 mt-1"
+            />
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Whatsapp</h3>
+              <p class="text-gray-600 dark:text-gray-400">+8619708412781</p>
+              <p class="text-gray-600 dark:text-gray-400">+8615895715480</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <UIcon
+              name="i-custom-email"
+              class="w-8 h-8 text-primary shrink-0 mt-1"
+            />
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Email</h3>
+              <p class="text-gray-600 dark:text-gray-400">info@goodwindpower.com</p>
+              <p class="text-gray-600 dark:text-gray-400">mkt@goodwindpower.com</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <UIcon
+              name="i-custom-address"
+              class="w-8 h-8 text-primary shrink-0 mt-1"
+            />
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Address</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Huadong Road, Chengbei Industrial Park, Jiangdu District, China
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </UForm>
+      <div>
+        <UForm
+          ref="form"
+          :schema="schema"
+          :state="formState"
+          :class="['w-full', layout === 'horizontal' ? 'space-y-6' : 'space-y-6']"
+          @submit="onSubmit"
+        >
+          <div
+            :class="['w-full', layout === 'horizontal' ? 'grid grid-cols-1 md:grid-cols-3 gap-4' : '']"
+          >
+            <UFormField
+              :label="t('contact.form.name')"
+              name="name"
+              class="flex flex-col w-full"
+            >
+              <template #label>
+                <span class="mb-2 font-medium">{{ t('contact.form.name') }}</span>
+              </template>
+              <UInput
+                v-model="formState.name"
+                class="w-full"
+              />
+            </UFormField>
+
+            <UFormField
+              :label="t('contact.form.email')"
+              name="email"
+              class="flex flex-col w-full"
+            >
+              <template #label>
+                <span class="mb-2 font-medium">{{ t('contact.form.email') }}</span>
+              </template>
+              <UInput
+                v-model="formState.email"
+                type="email"
+                class="w-full"
+              />
+            </UFormField>
+
+            <UFormField
+              :label="t('contact.form.region')"
+              name="region"
+              class="flex flex-col w-full"
+            >
+              <template #label>
+                <span class="mb-2 font-medium">{{ t('contact.form.region') }}</span>
+              </template>
+              <UInput
+                v-model="formState.region"
+                :placeholder="t('contact.form.regionPlaceholder')"
+                class="w-full"
+              />
+            </UFormField>
+          </div>
+
+          <UFormField
+            :label="t('contact.form.message')"
+            name="message"
+            class="flex flex-col w-full"
+          >
+            <template #label>
+              <span class="mb-2 font-medium">{{ t('contact.form.message') }}</span>
+            </template>
+            <UTextarea
+              v-model="formState.message"
+              :rows="5"
+              class="w-full"
+            />
+          </UFormField>
+
+          <div class="flex justify-center pt-6">
+            <UButton
+              type="submit"
+              class="w-full md:w-auto px-8 py-3 text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer flex items-center justify-center"
+              :loading="formStatus === 'loading'"
+              color="primary"
+              size="lg"
+            >
+              <span class="flex items-center justify-center gap-2">
+                <UIcon
+                  name="i-custom-send"
+                  class="w-5 h-5"
+                />
+                {{ t('contact.form.submit') }}
+              </span>
+            </UButton>
+          </div>
+        </UForm>
+      </div>
+    </div>
   </div>
 </template>
 
