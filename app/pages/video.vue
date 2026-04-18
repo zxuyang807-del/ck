@@ -439,6 +439,14 @@
         '/images/thumbnail/Goodwind-Power-Generator-125kva-Cummins-silent-diesel-genset-premium-series.webp',
       url: 'https://www.youtube.com/embed/YD-VNLbpTHE?autoplay=1&mute=1&loop=1&playlist=YD-VNLbpTHE',
     },
+    {
+      id: 53,
+      title: 'Goodwind Power Generator - 900kva Shangchai (SDEC) open type series',
+      category: 'diesel',
+      thumbnail:
+        '/images/thumbnail/Goodwind-Power-Generator-900kva-Shangchai-(SDEC)-open-type-series.webp',
+      url: 'https://www.youtube.com/embed/AJvoDgBNbmg?autoplay=1&mute=1&loop=1&playlist=AJvoDgBNbmg',
+    },
   ]
 
   // 当前选中的分类
